@@ -64,7 +64,7 @@ void remover_tarefa(Tarefa** cabeca, int id) {
         }
         atual = atual->proximo;
     }
-    printf("Tarefa com ID %d n„o encontrada.\n", id);
+    printf("Tarefa com ID %d n√£o encontrada.\n", id);
 }
 
 void buscar_tarefa(Tarefa* cabeca, int id) {
@@ -72,20 +72,20 @@ void buscar_tarefa(Tarefa* cabeca, int id) {
     while (atual != NULL) {
         if (atual->id == id) {
             printf("Tarefa encontrada:\n");
-            printf("ID: %d\nTÌtulo: %s\nPrioridade: %d\nData de CriaÁ„o: %s\n", 
+            printf("ID: %d\nT√≠tulo: %s\nPrioridade: %d\nData de Cria√ß√£o: %s\n", 
                    atual->id, atual->titulo, atual->prioridade, atual->data_criacao);
             return;
         }
         atual = atual->proximo;
     }
-    printf("Tarefa com ID %d n„o encontrada.\n", id);
+    printf("Tarefa com ID %d n√£o encontrada.\n", id);
 }
 
 void listar_tarefas(Tarefa* cabeca) {
     Tarefa* atual = cabeca;
     printf("Tarefas em ordem de prioridade:\n");
     while (atual != NULL) {
-        printf("ID: %d | TÌtulo: %s | Prioridade: %d | Data de CriaÁ„o: %s\n", 
+        printf("ID: %d | T√≠tulo: %s | Prioridade: %d | Data de Cria√ß√£o: %s\n", 
                atual->id, atual->titulo, atual->prioridade, atual->data_criacao);
         atual = atual->proximo;
     }
@@ -104,7 +104,7 @@ void listar_tarefas_inversa(Tarefa* cabeca) {
 
     printf("Tarefas em ordem inversa:\n");
     while (atual != NULL) {
-        printf("ID: %d | TÌtulo: %s | Prioridade: %d | Data de CriaÁ„o: %s\n", 
+        printf("ID: %d | T√≠tulo: %s | Prioridade: %d | Data de Cria√ß√£o: %s\n", 
                atual->id, atual->titulo, atual->prioridade, atual->data_criacao);
         atual = atual->anterior;
     }
@@ -123,18 +123,18 @@ int main() {
         printf("4. Listar Tarefas\n");
         printf("5. Listar Tarefas em Ordem Inversa\n");
         printf("0. Sair\n");
-        printf("Escolha uma opÁ„o: ");
+        printf("Escolha uma op√ß√£o: ");
         scanf("%d", &escolha);
 
         switch (escolha) {
             case 1:
                 printf("Digite ID da tarefa: ");
                 scanf("%d", &id);
-                printf("Digite tÌtulo da tarefa: ");
+                printf("Digite t√≠tulo da tarefa: ");
                 scanf(" %[^\n]", titulo);
                 printf("Digite prioridade da tarefa: ");
                 scanf("%d", &prioridade);
-                printf("Digite data de criaÁ„o (YYYY-MM-DD): ");
+                printf("Digite data de cria√ß√£o (YYYY-MM-DD): ");
                 scanf("%s", data_criacao);
                 adicionar_tarefa(&lista_tarefas, id, titulo, prioridade, data_criacao);
                 break;
@@ -158,7 +158,7 @@ int main() {
                 printf("Saindo...\n");
                 break;
             default:
-                printf("OpÁ„o inv·lida. Tente novamente.\n");
+                printf("Op√ß√£o inv√°lida. Tente novamente.\n");
         }
     } while (escolha != 0);
 
