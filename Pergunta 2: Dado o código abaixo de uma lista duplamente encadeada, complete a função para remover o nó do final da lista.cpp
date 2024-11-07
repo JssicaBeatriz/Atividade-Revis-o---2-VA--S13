@@ -30,8 +30,8 @@ void remover_final(No** cabeca) {
 int main() {
     No* CABECA = NULL;
 
-    remover_final(&CABECA); // Corrigido: adicionado ponto e vírgula
+    remover_final(&CABECA); 
 
-    return 0; // Adicionado retorno
+    return 0; 
 }
 
